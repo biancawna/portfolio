@@ -11,6 +11,9 @@ html {
     box-sizing: border-box;
     font-family: "Saira", sans-serif;
 }
+body {
+    width: 100%;
+}
 #stars {
     z-index: 1000;
     position: absolute;
@@ -26,7 +29,7 @@ html {
 }
 #cover {
     background-color: black;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -58,6 +61,7 @@ h1 {
 }
 #cover div p{
     animation: animate 0.5s forwards ease-in;
+    margin-right: -5px;
 }
 #cover div p::after{
     content: '↓';
@@ -65,9 +69,12 @@ h1 {
 #aboutme {
     background-color: white;
     padding: 20px;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 #aboutme h2, #projects h2, #contact h2 {
     font-family: "Bebas Neue", sans-serif;
@@ -76,19 +83,57 @@ h1 {
 #skills {
     background-color: black;
     color: white;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 20px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.skills-block {
+    display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+.skills-block div {
+    width: 100%;
+}
+.skills-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+}
+.skills-names p {
+    border: 2px solid rgba(255, 255, 255, 0.453);
+    padding: 0 5px;
 }
 #skills h2 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 2rem;
 }
+#skills ul {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+li .type {
+    font-size: 0.8rem;
+    border: 2px solid rgba(255, 255, 255, 0.453);
+    padding: 0px 10px;
+    /* border-radius: 12px; */
+    width: fit-content;
+}
+#skills li {
+    line-height: 1.8rem;
+}
+#skills .time {
+    font-size: 0.8rem;
+}
 #projects {
     background-color: white;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 20px;
     display: flex;
@@ -116,7 +161,7 @@ h1 {
 #contact {
     background-color: black;
     color: white;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 20px;
     display: flex;
