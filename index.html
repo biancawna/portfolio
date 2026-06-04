@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id="stars">
+        <img src="assets/bigstar.svg" alt="" style="filter: url(#sticker);">
+        <img src="assets/star2.svg" alt="" style="filter: url(#sticker);">
+        <img src="assets/mediumstar.svg" alt="" style="filter: url(#sticker);">
+        
+    </div>
+    <section id="cover">
+        <svg width="0" height="0">
+            <defs>
+                <filter id="sticker" x="-50%" y="-50%" width="200%" height="200%">
+                <feMorphology in="SourceAlpha" operator="dilate" radius="2" result="expanded"/>
+                <feFlood flood-color="white" result="clr"/>
+                <feComposite in="clr" in2="expanded" operator="in" result="outline"/>
+                <feDropShadow in="outline" dx="3" dy="3" stdDeviation="2"
+                    flood-color="black" flood-opacity="0.35" result="shadow"/>
+                <feMerge>
+                    <feMergeNode in="shadow"/>
+                    <feMergeNode in="outline"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+                </filter>
+            </defs>
+        </svg>
+        <h1>PORT<br>FOLIO</h1>
+        <div>
+            <button>
+                <img src="assets/campfire.svg" alt="" style="filter: url(#sticker);">
+            </button>
+            <p>Scroll<br></p>
+        </div>
+    </section>
+    <section id="aboutme">
+        <div>
+            <img src="assets/eueu.svg" alt="">
+            <div class="aboutme-content">
+                <h2>Hello!</h2>
+                <p>I'm Bianca Gomes, a former developer 
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div>
+            <h2>Education</h2>
+            <p>USP</p>
+            <p>IFBA</p>
+        </div>
+        <div class="skills-block">
+            <div>
+                <h2>Hard Skills</h2>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JS</p>
+                <p>SCRUM</p>
+                <p>PHP</p>
+                <p>PYTHON</p>
+                <p>MYSQL</p>
+            </div>
+            <div>
+                <h2>Languages</h2>
+                <p>Português - Nativo</p>
+                <p>Inglês - Intermediário</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2 style="filter: url(#sticker);">Projects</h2>
+        <div class="group-cards">
+            <div class="card">
+                <button></button>
+                <p>Tarefas&Tartarugas</p>
+            </div>
+            <div class="card">
+                <button></button>
+                <p>Pega o Pão</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div>
+            <h2>Contact me</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est consequatur cumque, aut laudantium harum dolore deleniti quod dolores accusamus animi voluptate magnam mollitia velit hic, atque exercitationem saepe adipisci et.</p>
+            <div id="contacts-icon">
+                <a href="http://">LinkedIn</a>
+                <a href="http://">Twitter</a>
+                <a href="http://">E-mail</a>
+                <a href="">Git-Hub</a>
+            </div>
+        </div>
+        <div>
+            <form>
+                <label for="name">Name:*</label>
+                <input id="name" type="text">
+                <label for="email">Email:*</label>
+                <input type="email" id="email">
+                <label for="message">Message:*</label>
+                <textarea id="message"></textarea>
+                <p>* Denotes a required field</p>
+                <button>Send -></button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
